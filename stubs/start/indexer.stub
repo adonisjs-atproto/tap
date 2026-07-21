@@ -5,7 +5,7 @@
 {{#var atUri = '`at://${evt.did}/${evt.collection}/${evt.rkey}`' }}
 {{#var upsertEvt = '`${evt.action}: ${uri}`' }}
 {{#var deleteEvt = '`deleted: ${uri}`' }}
-import tap from '@thisismissem/adonisjs-atproto-tap/services/tap'
+import tap from '@adonisjs-atproto/tap/services/tap'
 import { SimpleIndexer } from '@atproto/tap'
 
 // You can also use LexIndexer for a lexicon aware indexer:

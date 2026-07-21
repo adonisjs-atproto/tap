@@ -25,7 +25,7 @@ export async function configure(command: Configure) {
   let shouldInstallPackages: boolean | undefined = command.parsedFlags.install
   if (shouldInstallPackages === undefined) {
     shouldInstallPackages = await command.prompt.confirm(
-      'Do you want to install additional packages required by "@thisismissem/adonisjs-atproto-tap"?'
+      'Do you want to install additional packages required by "@adonisjs-atproto/tap"?'
     )
   }
 
@@ -44,7 +44,7 @@ export async function configure(command: Configure) {
 
   // Add provider to rc file
   await codemods.updateRcFile((rcFile) => {
-    rcFile.addProvider('@thisismissem/adonisjs-atproto-tap/provider')
+    rcFile.addProvider('@adonisjs-atproto/tap/provider')
     rcFile.addPreloadFile('#start/indexer')
   })
 

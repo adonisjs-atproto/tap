@@ -5,7 +5,7 @@ This package provides a small [Adonis.js](https://adonisjs.com) provider and ser
 ## Installation
 
 ```sh
-node ace add @thisismissem/adonisjs-atproto-tap
+node ace add @adonisjs-atproto/tap
 ```
 
 ### Configuring
@@ -13,7 +13,7 @@ node ace add @thisismissem/adonisjs-atproto-tap
 If you didn't use `node ace add` you can later run the configuration using:
 
 ```sh
-node ace configure @thisismissem/adonisjs-atproto-tap
+node ace configure @adonisjs-atproto/tap
 ```
 
 ## Indexer
@@ -21,7 +21,7 @@ node ace configure @thisismissem/adonisjs-atproto-tap
 The Tap Indexer (`SimpleIndexer`) can be accessed using:
 
 ```ts
-import indexer from '@thisismissem/adonisjs-atproto-tap/services/indexer'
+import indexer from '@adonisjs-atproto/tap/services/indexer'
 ```
 
 If you've installed using the instructions above, you will have the file `start/indexer.ts` created, which is where you can add the logic to handle the events from Tap. The provider automatically connects the `indexer.error()` handler to the [Adonis.js logger](https://docs.adonisjs.com/guides/digging-deeper/logger).
@@ -33,7 +33,7 @@ You can find out more in the [`@atproto/tap` documentation](https://github.com/b
 The Tap Client API for adding and removing repositories, resolving DIDs and such is accessible via:
 
 ```ts
-import tap from '@thisismissem/adonisjs-atproto-tap/services/tap'
+import tap from '@adonisjs-atproto/tap/services/tap'
 ```
 
 Which provides the following methods for interacting with the Tap server:

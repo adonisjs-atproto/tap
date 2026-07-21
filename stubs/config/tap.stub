@@ -1,7 +1,7 @@
 {{{
   exports({ to: app.configPath('tap.ts') })
 }}}
-import { defineConfig } from '@thisismissem/adonisjs-atproto-tap'
+import { defineConfig } from '@adonisjs-atproto/tap'
 import env from "#start/env"
 
 export default defineConfig({

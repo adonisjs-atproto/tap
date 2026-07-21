@@ -1,3 +1,10 @@
 build
 node_modules
 coverage
+TODO.md
+.yalc
+yalc.lock
+
+# Share workspace settings (YAML → prettier formatter) despite the global
+# ~/.config/git/ignore rule that excludes .vscode/settings.json.
+!.vscode/settings.json

@@ -1,5 +1,5 @@
 {
-  "name": "@thisismissem/adonisjs-atproto-tap",
+  "name": "@adonisjs-atproto/tap",
   "description": "Adonis.js provider for AT Protocol Tap Client",
   "version": "3.1.2",
   "engines": {
@@ -55,7 +55,7 @@
     }
   ],
   "repository": {
-    "url": "https://github.com/ThisIsMissEm/adonisjs-atproto-tap"
+    "url": "https://github.com/adonisjs-atproto/tap"
   },
   "dependencies": {
     "@poppinss/utils": "^7.0.1"
