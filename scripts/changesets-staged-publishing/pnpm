@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# Shim that rewrites `pnpm publish ...` to `pnpm stage publish ...`
+# (staged publishing: https://pnpm.io/cli/stage) and forwards every other
+# invocation to the real pnpm unchanged.
+#
+# Why: `changeset publish` shells out to `pnpm publish` in this repo. pnpm has
+# native staged publishing since 11.3, but changesets has no staged-publish
+# option yet (https://github.com/changesets/changesets/issues/2025). Because
+# this rewrites publish -> stage publish within the SAME tool, every flag
+# changesets passes (--access, --tag, --no-git-checks, --json) stays valid.
+set -euo pipefail
+
+# Resolve the real pnpm by excluding this shim's own directory from PATH for
+# the lookup, but do NOT export that trimmed PATH: nested pnpm invocations must
+# still resolve to this shim so their `pnpm publish` gets rewritten too.
+SELF_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
+REAL_PNPM="$(PATH="${PATH//$SELF_DIR:/}" command -v pnpm)"
+
+if [ "${1:-}" = "publish" ]; then
+  shift
+  exec "$REAL_PNPM" stage publish "$@"
+fi
+
+exec "$REAL_PNPM" "$@"

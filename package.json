@@ -1,11 +1,11 @@
 {
-  "name": "@thisismissem/adonisjs-atproto-tap",
+  "name": "@adonisjs-atproto/tap",
   "description": "Adonis.js provider for AT Protocol Tap Client",
   "version": "3.1.2",
   "engines": {
     "node": ">=24"
   },
-  "packageManager": "pnpm@10.26.1+sha512.664074abc367d2c9324fdc18037097ce0a8f126034160f709928e9e9f95d98714347044e5c3164d65bd5da6c59c6be362b107546292a8eecb7999196e5ce58fa",
+  "packageManager": "pnpm@11.15.1",
   "type": "module",
   "files": [
     "build",
@@ -55,7 +55,7 @@
     }
   ],
   "repository": {
-    "url": "https://github.com/ThisIsMissEm/adonisjs-atproto-tap"
+    "url": "https://github.com/adonisjs-atproto/tap"
   },
   "dependencies": {
     "@poppinss/utils": "^7.0.1"

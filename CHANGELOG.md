@@ -1,4 +1,4 @@
-# @thisismissem/adonisjs-atproto-tap
+# @adonisjs-atproto/tap
 
 ## 3.1.2
 
